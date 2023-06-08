@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
+:root{
+  --gris:#F2F2F2;
+  --azul:#303AF2;
+  --naranja:#F29F05;
+  --negro:#0D0D0D;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Link_Button{
+  text-decoration: none !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.foto-carrousel{
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+  height: 500px;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: end;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.foto-carrousel h2{
+  font-family:  Helvetica;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-block-start:0.3rem;
+  margin-block-end: 0.3rem;
+}
+.foto-carrousel p{
+  font-family:  Helvetica;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-block-start:0.3rem;
+  margin-block-end: 0.3rem;
+  text-align: justify;
+}
+.foto-carrousel-1{
+ background-image: url("./assest/cpf401.jpg");
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.foto-carrousel-2{
+  background-image: url("./assest/foto2.webP");
+ }
+.foto-carrousel-3{
+  background-image: url("./assest/foto3.webP");
+  
   }
-  to {
-    transform: rotate(360deg);
+
+  .text-carrousel{
+    padding: 20px;
   }
-}
