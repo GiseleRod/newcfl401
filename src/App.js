@@ -7,7 +7,14 @@ import Home from './Page/Home';
 import Contactos from './Page/Contacto';
 import Institucional from './Page/Institucional';
 import Footer from './components/Footer';
+import { useEffect } from 'react';
+import authService from './services/auth.service';
 function App() {
+  useEffect(()=>{
+    const auth=async()=>await authService.login("gustavo","gustavo")
+    .catch((error)=>console.log(error))
+    auth()
+  },[])
   return (
 
 

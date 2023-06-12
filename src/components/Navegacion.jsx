@@ -117,8 +117,8 @@ function Navegacion() {
                             }}
                         >
                             {pages.map((page) => (
-                                 <Link to={`/${page}`} className='Link_Button'>
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                                 <Link to={`/${page}`} className='Link_Button' key={page}>
+                                <MenuItem  onClick={handleCloseNavMenu}>
                                     <Typography textAlign="center">{page}</Typography>
                                 </MenuItem>
                                 </Link>
@@ -150,9 +150,9 @@ function Navegacion() {
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
-                            <Link to={`/${page}`} className='Link_Button'>
+                            <Link to={`/${page}`} className='Link_Button'  key={page}>
                              <Button
-                                key={page}
+                               
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: '#1976d2', display: 'block' }}
                             >
