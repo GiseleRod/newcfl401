@@ -9,6 +9,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 import moment from "moment/moment";
 import Animations from "../components/Animations";
 import Modal from '@mui/material/Modal';
+import authService from "../services/auth.service";
 const style = {
   position: 'absolute',
   top: '50%',
@@ -44,7 +45,7 @@ const Home = () => {
     }
   }
 
-
+  
   useEffect(() => {
     const getAllFamilias = () => {
       try {
