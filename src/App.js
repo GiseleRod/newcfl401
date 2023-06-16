@@ -7,16 +7,11 @@ import Home from './Page/Home';
 import Contactos from './Page/Contacto';
 import Institucional from './Page/Institucional';
 import Footer from './components/Footer';
-import { useEffect, useState } from 'react';
-import authService from './services/auth.service';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
-  const [loading,setLoading]=useState(false)
-  useEffect(()=>{
-    const auth=async()=>await authService.login("gustavo","gustavo")
-    
-    .catch((error)=>console.log(error))
-    auth()
-  },[0])
+ 
+  
   
   return (
 

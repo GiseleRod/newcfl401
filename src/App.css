@@ -13,13 +13,35 @@
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
-  background-color: #464646;
+  background-color: #464646 ;
   height: 500px;
   width: 100%;
   display: flex;
   align-items: end;
   justify-content: center;
   color: white;
+}
+
+.texto-portada-vision {
+  
+  margin-top: 2rem;
+  text-align: center;
+  text-justify: distribute;
+  padding: 5em;
+
+}
+
+
+.texto-portada-vision p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
+  font-weight: 600;
+
+}
+.texto-portada-vision ul {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
+  font-weight: 600;
 }
 
 .foto-carrousel h2{
