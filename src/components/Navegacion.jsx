@@ -59,7 +59,7 @@ function Navegacion() {
     return (
       
         <ThemeProvider theme={theme}>
-        <AppBar position="static" sx={{boxShadow:"none"}}>
+        <AppBar position="static" sx={{boxShadow:"none",paddingTop:"2rem"}} >
             <Container maxWidth="xl" >
            
                 <Toolbar disableGutters>
@@ -76,8 +76,8 @@ function Navegacion() {
                         <Box
                             component="img"
                             sx={{
-                                height: "60px",
-                                width: "60px",
+                                height: "120px",
+                                width: "120px",
 
                             }}
                             alt="Logo"
@@ -119,7 +119,7 @@ function Navegacion() {
                             {pages.map((page) => (
                                  <Link to={`/${page}`} className='Link_Button' key={page}>
                                 <MenuItem  onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{page}</Typography>
+                                    <Typography textAlign="center" color="var(--azul)">{page}</Typography>
                                 </MenuItem>
                                 </Link>
                             ))}
@@ -136,8 +136,8 @@ function Navegacion() {
                         <Box
                             component="img"
                             sx={{
-                                height: "60px",
-                                width: "60px",
+                                height: "100px",
+                                width: "100px",
                                 mr: 3,
 
                             }}
@@ -148,15 +148,20 @@ function Navegacion() {
                         </Box>
                     </Box>
 
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                    <Box sx={{ 
+                        flexGrow: 1, display: { xs: 'none', md: 'flex' } ,
+                        paddingLeft:"2rem"
+                        }}>
                         {pages.map((page) => (
                             <Link to={`/${page}`} className='Link_Button'  key={page}>
                              <Button
                                
                                 onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: '#1976d2', display: 'block' }}
+                                sx={{ my: 2,  display: 'block' }}
                             >
-                                {page}
+                             <Typography variant='h5'  fontWeight={600} color=" var(--azul)">
+                             {page}
+                                </Typography>  
                             </Button>
                             </Link>
                            

@@ -11,7 +11,7 @@ const DetosDelCentro = () => {
 
     return (
         <>
-            <Typography variant="h5" component="h2" pl={2} >
+            <Typography variant="h5" component="h2" pl={2} pt={2} >
                 Datos del centro
             </Typography>
             <Grid container spacing={2} p={2} pb={6}>

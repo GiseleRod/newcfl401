@@ -22,12 +22,13 @@
   color: white;
 }
 
+
 .texto-portada-vision {
   
   margin-top: 2rem;
   text-align: center;
   text-justify: distribute;
-  padding: 5em;
+ 
 
 }
 
@@ -61,20 +62,25 @@
   margin-block-end: 0.3rem;
   text-align: justify;
 }
-.foto-carrousel-1{
+#foto-carrousel-1{
  background-image: url("./assest/cpf401.jpg");
 
 }
 
 
-.foto-carrousel-2{
+#foto-carrousel-2{
   background-image: url("./assest/foto2.webP");
  }
-.foto-carrousel-3{
+#foto-carrousel-3{
   background-image: url("./assest/foto3.webP");
   
   }
 
   .text-carrousel{
     padding: 20px;
+  }
+
+  #foto_institucional{
+    background-image: url("./assest/institucional.webp");
+   
   }

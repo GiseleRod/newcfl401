@@ -10,7 +10,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 import moment from "moment/moment";
 import Animations from "../components/Animations";
 import Modal from '@mui/material/Modal';
-
+import Mision from "../components/Mision";
 import 'moment/locale/es';
 
 import DetalleDelCurso from "../components/DetallesDelCurso";
@@ -25,7 +25,8 @@ const style = {
   bgcolor: 'background.paper',
   border: '2px solid #303AF2',
   boxShadow: 24,
-  overflowY:"scroll"
+  overflowY:"scroll",
+  padding:{xs:"0" ,md:"4rem"}
 
 };
 const Home = () => {
@@ -93,9 +94,11 @@ const Home = () => {
 
     <Box sx={{
       backgroundColor: "#F2F2F2",
-
+      marginTop:"2rem",
+      paddingBottom:"2rem"
     }}>
-      <Carrousel></Carrousel>
+
+      <Carrousel ></Carrousel>
       <Box
       sx={{
         width:"100%",
@@ -152,7 +155,7 @@ const Home = () => {
                         sx={{ width: "100%", textAlign: "center", textWrap: "balance"}}
                         >
                           <Typography >
-                            {nombre}
+                            {nombre}{" "}
                           </Typography>
                         </Button>
 
@@ -166,7 +169,7 @@ const Home = () => {
           </Accordion>
         );
       })}
-     
+      <Mision></Mision>
       <Modal
         open={open}
         onClose={handleClose}
@@ -175,32 +178,34 @@ const Home = () => {
        
       >
         
-        <Box sx={style} id="modal-content">
+        <Box sx={style} id="modal-content"  >
         
           <Box sx={{
             background: "#303AF2",
             width: "100%",
-            height: "4em",
+           
             display: "flex",
             alignItems: "center",
             justifyContent:"center"
           }}>
             
-            <Typography variant="h5" component="h1" color="#fff" pl={1}>
+            <Typography variant="h5" component="h1" color="#fff" p={2}>
               {datosModal?.nombre}
             </Typography>
             
           </Box>
-         
-          <DatosDelCentro/>
           <DetalleDelCurso datosModal={datosModal}/>
-          <Grid container p={5} sx={{justifyContent:"center"}}>
-          <Button variant="outlined" href="https://cursosipfl.trabajo.gba.gob.ar/" target="_blank" >Inscripción </Button>
+          <Grid container  sx={{justifyContent:"start"}}>
+          <Button variant="contained" href="https://cursosipfl.trabajo.gba.gob.ar/" 
+          target="_blank"  sx={{margin:"2rem 0 3rem 1rem" ,backgroundColor:"#303AF2"}}>Inscripción </Button>
          
           </Grid>
+          <DatosDelCentro/>
+         
+         
           
         </Box>
-       
+        
       </Modal>
      
     </Box>

@@ -5,8 +5,8 @@ import Navegacion from './components/Navegacion';
 import { NavLink, Route, Routes, Router, Link, useLocation } from "react-router-dom";
 import Home from './Page/Home';
 import Contactos from './Page/Contacto';
-import Institucional from './Page/Institucional';
-import Footer from './components/Footer';
+import Institucional from './Page/Institucional1';
+import Footer from './components/Footer1';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {

@@ -10,21 +10,21 @@ function Carrousel(props) {
     return (
         <Carousel>
 
-            <div className='foto-carrousel-1 foto-carrousel'>
+            <div className=' foto-carrousel' id='foto-carrousel-1'>
                 {/* <div className='text-carrousel'>
             <h2>PROPUESTA</h2>
             <h2>FORMATIVA 2023</h2>
             <p>El objetivo pricipal de nuestro centro es capacitar a nuestros alumnos para una salida laboral</p>
             </div>*/}
             </div>
-            <div className='foto-carrousel-2 foto-carrousel'>
+            <div className=' foto-carrousel' id='foto-carrousel-2'>
                   {/* <div className='text-carrousel'>
             <h2>PROPUESTA</h2>
             <h2>FORMATIVA 2023</h2>
             <p>El objetivo pricipal de nuestro centro es capacitar a nuestros alumnos para una salida laboral</p>
             </div>*/}
             </div>
-            <div className='foto-carrousel-3 foto-carrousel'>
+            <div className='foto-carrousel' id='foto-carrousel-3'>
                   {/* <div className='text-carrousel'>
             <h2>PROPUESTA</h2>
             <h2>FORMATIVA 2023</h2>

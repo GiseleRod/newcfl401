@@ -8,7 +8,7 @@ const Institucional =()=>{
         {backgroundColor:"#F2F2F2",
        
         }}>
-              <div className="texto-portada-vision">
+              <Box className="texto-portada-vision" sx={{padding:{xs:"0.5rem",md:"5rem"}}}>
                 <Typography
                 variant="h3"
                 component="h3"
@@ -78,7 +78,7 @@ const Institucional =()=>{
                     hoy, ser parte y continuar escribiendo la historia.
                 </p>
 
-            </div>
+            </Box>
 
         </Box>
      

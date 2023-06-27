@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material"
 import Grid from '@mui/material/Unstable_Grid2';
 import logo from '../assest/logoCFL.png'
 
-const Footer = () => {
+const Mision = () => {
     return (
         <Box sx={{ backgroundColor: '#F29F05' }}>
             <Grid container spacing={2} sx={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", minHeight: "400px" }}>
@@ -10,7 +10,7 @@ const Footer = () => {
                     <img src={logo} width="200px" height={"200px"} />
                 </Grid>
                 <Grid xs={12} md={8} pl={2}>
-                    <Typography variant="h3" color="white" textAlign="center" >
+                    <Typography variant="h3" color="white" textAlign="center" fontWeight={700}>
                         NUESTRA VISIÓN
                     </Typography>
                     <Typography variant="h6" color="white" textAlign="justify" p={2} >
@@ -22,4 +22,4 @@ const Footer = () => {
         </Box>
     )
 }
-export default Footer;
+export default Mision;
