@@ -7,6 +7,7 @@ import 'moment/locale/es';
 import ApartmentOutlinedIcon from '@mui/icons-material/Apartment';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import SmartphoneOutlinedIcon from '@mui/icons-material/SmartphoneOutlined';
+
 const DetosDelCentro = () => {
 
     return (

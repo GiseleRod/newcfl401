@@ -1,18 +1,33 @@
-import React, { useRef } from "react"
+import React, { useRef, useState } from "react"
 import { Container, Form ,Button} from "react-bootstrap"
 import emailjs from '@emailjs/browser';
 import { Box } from "@mui/material"
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+import { useNavigate } from "react-router-dom";
 const Contacto = () => {
-    const form = useRef();
+    const [loading,setLoadind]=useState(false)
+    const navigate=useNavigate()
 
+
+    const form = useRef();
+    const MySwal = withReactContent(Swal)
     const sendEmail = (e) => {
         e.preventDefault();
-
-        emailjs.sendForm('service_55ek118', 'template_gm6iqtk', form.current, 'user_cMQEkqyoRzQp766l9ch6i')
+        setLoadind(true)
+        emailjs.sendForm('service_gq2429h', "template_ctbvx6k", form.current, 'oh93a5yl8P3x6insn')
             .then((result) => {
-                console.log(result.text);
+                MySwal.fire({
+                    title: <strong>Mensaje Enviado!</strong>,
+                    
+                    icon: 'success'
+                  }).then((res)=>{
+                    navigate("/Home")
+                  })
+                console.log("Mensaje enviado");
             }, (error) => {
                 console.log(error.text);
+                setLoadind(false)
             });
     };
     return (
@@ -21,7 +36,7 @@ const Contacto = () => {
       
           }}>
         <Container>
-            <div className="texto-portada-vision mb-3">
+            <div className="texto-portada-vision mb-3 pb-5 pt-5 ">
                 <h2>Contacto</h2>
             
             <Form ref={form} onSubmit={sendEmail}>
@@ -37,9 +52,9 @@ const Contacto = () => {
                     <Form.Label>Mensaje</Form.Label>
                     <Form.Control as="textarea" name="message" />
                 </Form.Group>
-                <div className="d-grid gap-2 mt-1 ">
-                <Button variant="outline-primary" className="boton-masinformacion" type="submit" value="Send" >
-                    Enviar Mensaje
+                <div className="d-grid gap-2 mt-1  ">
+                <Button disabled={loading} variant="outline-primary" className="boton-masinformacion" type="submit" value="Send" >
+                  {loading?"Enviando":"Enviar Mensaje"}  
                 </Button>
                 </div>
             </Form>
@@ -54,6 +69,7 @@ const Contacto = () => {
     </form>*/}
     </div>
         </Container>
+        
         </Box>
     )
 }

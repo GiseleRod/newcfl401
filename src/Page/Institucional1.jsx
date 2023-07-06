@@ -7,93 +7,66 @@ const Institucional = () => {
 
     return (
         <>
-        <Box sx={
-        {backgroundColor:"#F2F2F2",
-        marginTop:"2rem",
-        paddingBottom:"2rem",
-        
-        }}>
-            <Grid container spacing={2}>
-                <Grid xs={12} md={6}>
+            <Box sx={
+                {
+                    backgroundColor: "#F2F2F2",
+                    marginTop: "2rem",
+                    paddingBottom: "2rem",
 
-                    <div id="foto_institucional" className="foto-carrousel"></div>
-                </Grid>
-                <Grid xs={12} md={6}>
-                    <Typography
-                        variant="h3"
-                        component="h3"
-                        sx={{ fontWeight: "700", color: "var(--azul)" }}
-                        mb={4}
-                        pr={2}
-                    >
-                        CENTRO DE FORMACIÓN LABORAL 401
-                    </Typography>
-                     <Typography variant="h4" component={"p"}  pl={{xs:2}} pr={2}>
-                        El Centro de Formación Profesional de San
-                        Antonio de Areco, fue inaugurado el 27 de
-                        mayo de 1987, denominándose Centro de
-                        Formación Profesional N° 52, en las dependencias
-                        del que fuera Consejo Escolar de esta localidad,
-                        ubicado en las calles Azcuénaga y Moreno.
-                    </Typography>
-                   
-                </Grid>
-            </Grid>
-            <Grid >
-             <Typography variant="h4" component={"p"} pl={2} pr={2} >
-                        Se creó por un convenio firmado entre la Dirección General de Cultura y Educación y
-                        nuestra Municipalidad, interviniendo en esta gestión: el Profesor José
-                        Gabriel Dumont, el entonces Intendente,Doctor Teodoro Dominguez, el
-                        Director de Educación 9 Cultura Municipal Dionisio Lambertini, la Secretaria Prof.
-                        Matilde Roccatagliata
-                        de Rojo y la Inspectora
-                        de D. E. A. y F. P. Sra.
-                        Sarmiento.
-                    </Typography>
-                     <Typography variant="h4" component={"p"} pl={2} pr={2}>
-                        <b>EL CLUB DE LEONES</b> de nuestra cuidad, decidió donar el entonces edificio, donde funcionaba el
-                        Consejo Escolar, para que allí se desempeñara el <b>CENTRO DE FORMACIÓN</b>. El primer Director fue el Profesor Miguel Ángel Gasparini, ocupando este cargo desde 1987 a 1989.
-                    </Typography>
-                 <Typography variant="h4" component={"p"} pl={2} pr={2}>
-                    Previamente al comienzo de las clases, se dicto
-                    un curso de Formación de Instructores; el cual se
-                    llevo a cabo de agosto a noviembre del año 1986,
-                    en las instalaciones de la Escuela Nº3, bajo la
-                    responsabilidad del Instructor Jefe Victor Caputto.
-                    Egresando en esa oportunidad, los primeros
-                    Instructores: Ayala, Centurión, Lépore, Gomez,
-                    Vandoni, Rossi, Bidone, Bardo, Morello, Mechali,
-                    Martínez González, Falivene y Barnetche.
-                </Typography>
-                 <Typography variant="h4" component={"p"} pl={2} pr={2}>
-                    El 27/05/87 comenzaron a dictarse los primeros
-                    cursos, los cuales fueron:
-                </Typography>
-                 <Typography variant="h4" component={"p"} pl={2} pr={2} pt={1}>
-                    <ul >
+                }}>
+                <Grid container spacing={2}>
+                    <Grid xs={12} md={12}>
 
-                        <li style={{ listStyleType: "square" }}>Electricidad</li>
-                        <li style={{ listStyleType: "square" }}>Carpintero de banco</li>
-                        <li style={{ listStyleType: "square" }}>Modista</li>
-                        <li style={{ listStyleType: "square" }}>Mecánica del automotor</li>
-                        <li style={{ listStyleType: "square" }}>Contabilidad</li>
-                        <li style={{ listStyleType: "square" }}>Carpintería</li>
-                    </ul>
-                </Typography>
-                 <Typography variant="h4" component={"p"} pl={2} pr={2}>
-                    En 1993, se dicto en la sede de este Centro el segundo
-                    curso de Formación de Instructores a cargo del
-                    Instructor Jefe Luis Crossa.
-                </Typography>
-                 <Typography variant="h4" component={"p"} pl={2} pr={2}>
-                    En 1997, se lo denomina como Centro de Formación Profesional N° 401.
-                </Typography>
-                 <Typography variant="h4" component={"p"} pl={2} pr={2}>
-                    Vaya, nuestro mas profundo agradecimiento a aquellos
-                    que estuvieron, a los que no están y a los que nos toca
-                    hoy, ser parte y continuar escribiendo la historia.
-                </Typography>
-            </Grid>
+                        <div id="foto_institucional" className="foto-carrousel"></div>
+                    </Grid>
+                    
+                </Grid>
+                <Grid >
+                <Typography
+                            variant="h3"
+                            component="h3"
+                            sx={{ fontWeight: "700", color: "var(--azul)" }}
+                            mb={4}
+                            pr={2}
+                            pt={3}
+                            textAlign="center"
+                        >
+                            CENTRO DE FORMACIÓN LABORAL 401
+                        </Typography>
+                    <Typography variant="h5" component={"p"} pl={2} pr={2} pb={1.5} >
+                    El Centro de Formación Profesional de San Antonio de Areco se crea según convenio del año 1986 entre la Dirección General de Escuelas y Cultura y el Municipio local, considerando la necesidad de contar con una estructura educativa para la formación de mano de obra especializada en concordancia con los requerimientos de la zona, promoviendo la capacitación de jóvenes y adultos para el ámbito laboral.
+                    </Typography>
+                    <Typography variant="h5" component={"p"} pl={2} pr={2} pb={1.5}>
+                        Se inaugura el 27 de mayo de 1987, denominándose Centro de Formación Profesional N° 52, en las dependencias del que fuera el Consejo Escolar, ubicado en las calles Azcuénaga y Moreno. Posteriormente, el Club de Leones de nuestra ciudad, decidió donar el edificio donde funcionaba para que en el desarrollase su tarea educativa.
+                    </Typography>
+                    <Typography variant="h5" component={"p"} pl={2} pr={2} pb={1.5}>
+                        Previamente al inicio de clases, se dictó un curso de Formación de Instructores desde agosto a noviembre de 1986, en las instalaciones de la Escuela Nº3 con el objetivo de capacitar al equipo docente.
+                    </Typography>
+                    <Typography variant="h5" component={"p"} pl={2} pr={2} pb={1.5}>
+                        El 27 de mayo de 1987 iniciaron los primeros cursos:  Electricidad, Carpintero de banco, Modista, Mecánica del automotor y Contabilidad.
+                    </Typography>
+                    <Typography variant="h5" component={"p"} pl={2} pr={2} pb={1.5} >
+                        En 1994 la Provincia de Buenos Aires reenumeró los Servicios Educativos por Distrito y el Centro pasó a denominarse C.F.P. Nº 401 de San Antonio de Areco
+                    </Typography>
+                    <Typography variant="h5" component={"p"} pl={2} pr={2} pb={1.5}>
+                        Desde abril de 2001 hasta 2009, funcionó un anexo del CFP N° 401 de San Antonio de Areco en la localidad de Capitán Sarmiento.
+                    </Typography>
+                    <Typography variant="h5" component={"p"} pl={2} pr={2} pb={1.5}>
+                        En 2018 con la intención de mejorar la empleabilidad de las personas y la competitividad en el mundo laboral, el Ministerio de Trabajo bonaerense puso en marcha el Instituto Provincial de Formación Laboral. A partir de un nuevo convenio firmado entre el mencionado Ministerio y el Municipio local, nuestro CFP cambió su nombre a Centro de Formación Laboral N° 401.
+                    </Typography>
+                    <Typography variant="h5" component={"p"} pl={2} pr={2} pb={1.5}>
+                        En 2020, este CFL se incorpora al Registro de Capacitadores del Ministerio de Desarrollo Agrario de la Provincia de Buenos Aires, con el fin de otorgar el Carnet de Manipulador de Alimentos de acuerdo al CAA – Ley N° 18.284
+                    </Typography>
+                    <Typography variant="h5" component={"p"} pl={2} pr={2}>
+                        Los cursos que se dictan en este CFL son gratuitos, responden a los Diseños Curriculares del Consejo Federal de Educación y se otorgan Títulos Oficiales de la Dirección de Cultura y Educación de la Provincia de Buenos Aires correspondientes a la modalidad Formación Profesional.
+                    </Typography>
+                    <Typography variant="h5" component={"p"} pl={2} pr={2} pb={1.5}>
+                        Nuestra propuesta formativa anual se fundamenta en las necesidades socio-productivas del distrito planificando cursos de Formación Inicial en sus tres niveles, Formación Continua y Capacitación Laboral de diversas familias profesionales.
+                    </Typography>
+                    <Typography variant="h5" component={"p"} pl={2} pr={2} pb={1.5}>
+                        Vaya, nuestro mas profundo agradecimiento a aquellos que estuvieron, a los que no están y a los que nos toca hoy, ser parte y continuar escribiendo la historia.
+                    </Typography>
+                </Grid>
             </Box>
         </>
     )

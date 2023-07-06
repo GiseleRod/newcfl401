@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "https://areco.gob.ar:9536/api",
+  baseURL: "https://administracion.cfl401areco.ar/api",
   headers: {
     
     "Content-type": "application/json"

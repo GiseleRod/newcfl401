@@ -10,23 +10,26 @@ import Grid from '@mui/material/Unstable_Grid2';
 import moment from "moment/moment";
 import Animations from "../components/Animations";
 import Modal from '@mui/material/Modal';
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import Mision from "../components/Mision";
+import { animateScroll as scroll } from "react-scroll";
 import 'moment/locale/es';
 
 import DetalleDelCurso from "../components/DetallesDelCurso";
 import { ModalHeader } from "react-bootstrap";
+import Novedades from "../components/Novedades";
 const style = {
   position: 'absolute',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: "80%",
-  maxHeight:"80%",
+  maxHeight: "80%",
   bgcolor: 'background.paper',
   border: '2px solid #303AF2',
   boxShadow: 24,
-  overflowY:"scroll",
-  padding:{xs:"0" ,md:"4rem"}
+  overflowY: "scroll",
+  padding: { xs: "0", md: "4rem" }
 
 };
 const Home = () => {
@@ -37,17 +40,7 @@ const Home = () => {
   const [datosModal, setDatosModal] = useState()
   //const [isDowloading,setIsDowloading]=useState(false)
 
-  const captureModalAsImage = () => {
-    const modalElement = document.getElementById('modal-content');
-    console.log(modalElement)
-    html2canvas(modalElement).then(canvas => {
-      const imageURL = canvas.toDataURL('image/png');
-      const link = document.createElement('a');
-      link.href = imageURL;
-      link.download = 'modal_image.png';
-      link.click();
-    });
-  };
+
   const handleOpen = (data) => {
     setDatosModal(data)
     setOpen(true)
@@ -67,9 +60,10 @@ const Home = () => {
 
 
   useEffect(() => {
+    scroll.scrollTo()
     const getAllFamilias = () => {
       try {
-        http.get("/familia/getAll")
+        http.get("/familia/getAllcoorte")
           .then((res) => {
             if (res.data.success) {
               console.log(res.data.data)
@@ -94,30 +88,31 @@ const Home = () => {
 
     <Box sx={{
       backgroundColor: "#F2F2F2",
-      marginTop:"2rem",
-      paddingBottom:"2rem"
+      marginTop: "2rem",
+      paddingBottom: "2rem",
+      position: 'relative'
     }}>
 
       <Carrousel ></Carrousel>
       <Box
-      sx={{
-        width:"100%",
-        textAlign:"center",
-        paddingY:"5em"
-      }}
+        sx={{
+          width: "100%",
+          textAlign: "center",
+          paddingY: "5em"
+        }}
       >
-                <Typography variant="h3" color="var(--azul)" fontWeight={700}>
-                 PROPUESTA FORMATIVA 2023
-                </Typography>
-                <Typography variant="h4" color="var(--azul)">
-                 Nuestros cursos otorgan Certificación Oficial
-                </Typography>
+        <Typography variant="h3" color="var(--azul)" fontWeight={700}>
+          PROPUESTA FORMATIVA 2023
+        </Typography>
+        <Typography variant="h4" color="var(--azul)">
+          Nuestros cursos otorgan Certificación Oficial
+        </Typography>
 
       </Box>
       {loading && <Animations />}
       {familias.map((data, i) => {
         return (
-          <Accordion key={i} sx={{mb:3,width:"90%",transform: "translateX(-50%)",left: "50%"}}>
+          <Accordion key={i} sx={{ mb: 3, width: "90%", transform: "translateX(-50%)", left: "50%" }}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"
@@ -151,8 +146,8 @@ const Home = () => {
                     if (nombre !== null) {
                       return (
 
-                        <Button onClick={() => handleOpen(data)} key={j} size="large" 
-                        sx={{ width: "100%", textAlign: "center", textWrap: "balance"}}
+                        <Button onClick={() => handleOpen(data)} key={j} size="large"
+                          sx={{ width: "100%", textAlign: "center", textWrap: "balance" }}
                         >
                           <Typography >
                             {nombre}{" "}
@@ -169,45 +164,49 @@ const Home = () => {
           </Accordion>
         );
       })}
-      <Mision></Mision>
+      <Mision />
+      <Novedades />
       <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
-       
+
       >
-        
+
         <Box sx={style} id="modal-content"  >
-        
+
           <Box sx={{
             background: "#303AF2",
             width: "100%",
-           
+
             display: "flex",
             alignItems: "center",
-            justifyContent:"center"
+            justifyContent: "center"
           }}>
-            
+
             <Typography variant="h5" component="h1" color="#fff" p={2}>
               {datosModal?.nombre}
             </Typography>
-            
+
           </Box>
-          <DetalleDelCurso datosModal={datosModal}/>
-          <Grid container  sx={{justifyContent:"start"}}>
-          <Button variant="contained" href="https://cursosipfl.trabajo.gba.gob.ar/" 
-          target="_blank"  sx={{margin:"2rem 0 3rem 1rem" ,backgroundColor:"#303AF2"}}>Inscripción </Button>
-         
+          <DetalleDelCurso datosModal={datosModal} />
+          <Grid container sx={{ justifyContent: "start" }}>
+            <Button variant="contained" href="https://cursosipfl.trabajo.gba.gob.ar/"
+              target="_blank" sx={{ margin: "2rem 0 3rem 1rem", backgroundColor: "#303AF2",padding:"10px 40px 10px 40px" }}>Inscripción </Button>
+
           </Grid>
-          <DatosDelCentro/>
-         
-         
-          
+          <DatosDelCentro />
+          <Box sx={{ display: "flex", justifyContent: "end" }}>
+            <Button variant="contained" onClick={handleClose} sx={{ margin: "2rem 1rem 3rem 1rem", backgroundColor: "#303AF2",padding:"10px 40px 10px 40px" }}>Cerrar </Button>
+          </Box>
+          <Button sx={{ position: "absolute", top: 0, right: 0, color: { xs: "white", md: "#303AF2" } }} onClick={handleClose} >
+            <HighlightOffIcon sx={{ fontSize: "3em" }} />
+          </Button>
         </Box>
-        
+
       </Modal>
-     
+
     </Box>
 
 
