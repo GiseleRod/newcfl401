@@ -66,16 +66,16 @@
   text-align: justify;
 }
 #foto-carrousel-1{
- background-image: url("./assest/cpf401.jpg");
+ background-image: url("./assest/imagenes/cpf401.jpg");
 
 }
 
 
 #foto-carrousel-2{
-  background-image: url("./assest/foto2.webP");
+  background-image: url("./assest/imagenes/foto2.WebP");
  }
 #foto-carrousel-3{
-  background-image: url("./assest/foto3.webP");
+  background-image: url("./assest/imagenes/foto3.WebP");
   
   }
 
@@ -119,6 +119,10 @@
 
   
 
+}
+.Banner-Novedades{
+  display: flex;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 992px) {

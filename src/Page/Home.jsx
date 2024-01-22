@@ -18,6 +18,7 @@ import 'moment/locale/es';
 import DetalleDelCurso from "../components/DetallesDelCurso";
 import { ModalHeader } from "react-bootstrap";
 import Novedades from "../components/Novedades";
+import CflService from "../services/cflService";
 const style = {
   position: 'absolute',
   top: '50%',
@@ -41,7 +42,16 @@ const Home = () => {
   //const [isDowloading,setIsDowloading]=useState(false)
 
 
-  const handleOpen = (data) => {
+  const handleOpen = async(data) => {
+    
+      const res=await CflService.getHorarios(data.idCurso)
+      const resSede=await CflService.getSedeByID(data.sedeIdSede)
+    //console.log(res.data.data)
+      data.diasDeSemanaHasCursosByIdCurso=res.data.data;
+      data.sedeBySedeIdSede=resSede.data.data
+    
+    //console.log(data)
+    //data.diasDeSemanaHasCursosByIdCurso=
     setDatosModal(data)
     setOpen(true)
   };
@@ -102,7 +112,7 @@ const Home = () => {
         }}
       >
         <Typography variant="h3" color="var(--azul)" fontWeight={700}>
-          PROPUESTA FORMATIVA 2023
+          PROPUESTA FORMATIVA 2024
         </Typography>
         <Typography variant="h4" color="var(--azul)">
           Nuestros cursos otorgan Certificación Oficial

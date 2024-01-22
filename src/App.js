@@ -13,10 +13,11 @@ import ReactGA from 'react-ga';
 
 
 
+
 const Home = lazy(() =>import ('./Page/Home'));
 const Contactos = lazy(() =>import ('./Page/Contacto'));
 const  Institucional= lazy(() =>import ('./Page/Institucional1'));
-
+const  ImageUploader= lazy(() =>import ('./Page/ImageUploader'));
 
 function App() {
  
@@ -40,6 +41,7 @@ function App() {
         <Route path='/Home' element={<Home />} />
         <Route path='/Contacto' element={<Contactos />} />
         <Route path='/Institucional' element={<Institucional />} />
+        <Route path='/upload' element={<ImageUploader/>} />
       </Routes>
       <Footer></Footer>
       </Suspense>

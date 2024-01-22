@@ -9,6 +9,7 @@ import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
 
 
 const DetalleDelCurso=({datosModal})=>{
+  console.log(datosModal)
     
 return(
     <>
@@ -29,17 +30,17 @@ return(
                 Sede
               </Typography>
               <Typography  variant="p" component="p" >
-                  { datosModal?.sedeBySedeIdSede.nombre}
+                  { datosModal?.sedeBySedeIdSede?.nombre}
               </Typography>
             </Grid>
             <Grid xs={12} md={12}>
               <Typography variant="h6" component="h3" color="#303AF2">
                 Días y horarios
               </Typography>
-             { datosModal?.diasDeSemanaHasCursosByIdCurso.map((data,i)=>{
+             { datosModal?.diasDeSemanaHasCursosByIdCurso?.map((data,i)=>{
               return(
                 <Typography variant="p" component="p" key={i}>
-                {data.diasDeSemanaByDiasDeSemanaIdDiasDeSemana?.nombre}{": "} { data.horaInicio }{ " / "}{data.horaFin}
+                {data.nombre}{": "} { data.horaInicio }{ " / "}{data.horaFin}
               </Typography>
               )
              })}
@@ -50,7 +51,7 @@ return(
               Dirección
               </Typography>
               <Typography  variant="p" component="p" >
-                {datosModal?.sedeBySedeIdSede.calle}{" "}{datosModal?.sedeBySedeIdSede.numero}{" "}{datosModal?.sedeBySedeIdSede.localidad}
+                {datosModal?.sedeBySedeIdSede?.calle}{" "}{datosModal?.sedeBySedeIdSede?.numero}{" "}{datosModal?.sedeBySedeIdSede?.localidad}
               </Typography>
             </Grid>
             <Grid xs={12} md={6} container spacing={0}>

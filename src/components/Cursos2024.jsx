@@ -5,29 +5,30 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import banner from "../assest/imagenes/banner2024.jpg"
 
-export default function Tarjeta({foto,title,titulo,texto}) {
+
+export default function MediaCard() {
   return (
     <div className='Banner-Novedades'>
-    <Card sx={{ minWidth: 345 }}>
+    <Card sx={{ maxWidth: 345 }}>
       <CardMedia
-      
-        sx={{height:"500px" }}
-        image={foto}
-        title={title}
+        sx={{ height: 500,width:350 }}
+        image={banner}
+        title=""
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {titulo}
+       
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          {texto}
+         
         </Typography>
       </CardContent>
       {/*<CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-  </CardActions>*/}
+        <Button size="small" href='https://cursosipfl.trabajo.gba.gov.ar/login' target='_blank'>Ir a inscripción</Button>
+        
+      </CardActions>*/}
     </Card>
     </div>
   );
