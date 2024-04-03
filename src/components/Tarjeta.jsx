@@ -11,7 +11,7 @@ export default function Tarjeta({foto,title,titulo,texto}) {
     <div className='Banner-Novedades'>
     <Card sx={{ minWidth: 345 }}>
       <CardMedia
-      
+        
         sx={{height:"500px" }}
         image={foto}
         title={title}

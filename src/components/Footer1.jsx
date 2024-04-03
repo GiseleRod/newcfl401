@@ -12,7 +12,7 @@ import { FaInstagram } from "react-icons/fa6";
 const Footer = () => {
     return (
         <>
-            <Box sx={{ backgroundColor: '#00b0ff' }}>
+            <Box sx={{ backgroundColor: '#00b000' }}>
                 <Grid container spacing={2} sx={{ display: "flex", alignItems: "stretch", justifyContent: "center", width: "100%", paddingBottom: "20px" }}>
                     <Grid xs={12} md={3} sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
                         <img src={logo} width="200px" height={"200px"} />

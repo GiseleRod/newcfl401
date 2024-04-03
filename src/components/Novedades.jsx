@@ -1,11 +1,10 @@
 import Grid from "@mui/material/Unstable_Grid2/Grid2"
 import Tarjeta from "./Tarjeta"
-import novedad1 from '../assest/novedad1.webp'
-import novedad2 from '../assest/novedades2.png'
-import novedad3 from '../assest/novedad3.webp'
-import { Box, Typography } from "@mui/material"
+import Video from "../assest/videos/inscripcioncfl.mp4"
+import { Box, Typography, Card, CardMedia, CardContent } from "@mui/material"
 import CflService from "../services/cflService"
 import { useEffect, useState } from "react";
+
 import Cursos2024 from "./Cursos2024"
 
 const Novedades = () => {
@@ -17,8 +16,8 @@ const Novedades = () => {
                 console.log(resp)
                 setNovedades(resp.data.data)
             })
-            .catch((error)=>console.log(error))
-            
+            .catch((error) => console.log(error))
+
     }, [])
     return (
         <>
@@ -33,19 +32,43 @@ const Novedades = () => {
                     <Typography variant="h3" color="var(--azul)" fontWeight={700}>
                         NOVEDADES
                     </Typography>
-                    
-                <Grid>
-                    {/*<Cursos2024 />*/}
-                </Grid>
+
+                    <Grid>
+                        {/*<Cursos2024 />*/}
+                    </Grid>
                 </Box>
                 {novedades.map((data, i) => {
                     return (
                         <Grid xs={12} md={4} key={i} >
-                            <Tarjeta foto={data.url} title={"Novedad "+(i+1)} titulo={data?.titulo} texto={data?.bajada} />
+                            <Tarjeta foto={data.url} title={"Novedad " + (i + 1)} titulo={data?.titulo} texto={data?.bajada} />
                         </Grid>
+
                     )
                 })}
-                
+                <Grid xs={12} md={4}  >
+                    <div className='Banner-Novedades'>
+                        <Card sx={{ minWidth: 345 }}>
+                            <CardMedia
+                                component="video"
+                                src={Video}
+                                sx={{ height: "500px" }}
+                                
+                                title=""
+                                controls
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="div">
+                                  
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </div>
+                </Grid>
+
+
             </Grid>
         </>
     )
