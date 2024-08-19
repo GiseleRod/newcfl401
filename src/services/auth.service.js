@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://aplicacion.cfl401areco.ar/api/auth/"//"http://areco.gob.ar:9528/api/auth/";
+const API_URL = "https://api.administracion.cfl401areco.edu.ar/api/auth/"//"http://areco.gob.ar:9528/api/auth/";
 
 class AuthService {
   async login(username, password) {
