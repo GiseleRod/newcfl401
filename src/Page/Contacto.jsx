@@ -20,7 +20,7 @@ const Contacto = () => {
                 MySwal.fire({
                     title: <strong>Mensaje Enviado!</strong>,
                     
-                    icon: 'success'
+                    icon: 'success' 
                   }).then((res)=>{
                     navigate("/Home")
                   })
